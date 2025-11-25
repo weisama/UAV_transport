@@ -1,0 +1,45 @@
+camera_name: "camera"
+camera_namespace: "camera"
+
+enable_color: true
+rgb_camera.color_profile: 640,480,30
+rgb_camera.color_format: "RGB8"
+rgb_camera.enable_auto_exposure: true
+
+enable_depth: true
+depth_module.depth_profile: 640,480,30
+depth_module.depth_format: "Z16"
+depth_module.enable_auto_exposure: true
+
+# 不使用红外
+enable_infra: false
+enable_infra1: false
+enable_infra2: false
+
+# RGB-D SLAM 核心
+align_depth.enable: true
+enable_sync: true
+
+# 建议关闭所有滤波——SLAM 效果更稳定
+decimation_filter.enable: false
+spatial_filter.enable: false
+temporal_filter.enable: false
+disparity_filter.enable: false
+hole_filling_filter.enable: false
+
+# IMU（RGBD 不需要）
+enable_gyro: false
+enable_accel: false
+enable_motion: false
+
+# 点云（不需要）
+pointcloud.enable: false
+
+# TF
+publish_tf: true
+base_frame_id: "camera_link"
+
+# 其他
+clip_distance: -1.0
+log_level: "info"
+
